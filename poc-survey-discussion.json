@@ -1,0 +1,68 @@
+[{
+	"name": "s1",
+	"questions": [{
+		"type": "multi",
+		"name": "s1p1q1",
+		"options": [{
+			"type": "text",
+			"name": "foo",
+			"title": "Cheese"
+		}],
+		"randomize": true
+	}, {
+		"type": "multi",
+		"name": "s1p1q2",
+		"title": "What image is best? (max 2 options)",
+		"options": [{
+			"type": "image",
+			"name": "janga",
+			"url": "adsadsads.png"
+		}, {
+			"type": "image",
+			"name": "janga",
+			"url": "adsadsads.png"
+		}, {
+			"type": "image",
+			"name": "janga",
+			"url": "adsadsads.png"
+		}, {
+			"type": "image",
+			"name": "janga",
+			"url": "adsadsads.png"
+		}],
+		"maxOptions": 1,
+		"randomize": true
+	}, {
+		"type": "freeform-text",
+		"name": "s1p1q3",
+		"maxCharacters": 100,
+		"title": "What is the name of your car?"
+	}, {
+		"type": "freeform-date",
+		"name": "s1p1q4",
+		"title": "When were you born?"
+	}, {
+		"type": "freeform-number",
+		"name": "s1p1q5",
+		"title": "How old are you?"
+	}]
+}, {
+	"name": "s2",
+	"condition": [
+		["s1p1q5", ">", "25"]
+	],
+	"questions": [{
+		"type": "multi",
+		"name": "s2p1q1",
+		"options": [{
+			"type": "text",
+			"name": "s2p1q1o1",
+			"title": "Yes"
+		}, {
+			"type": "text",
+			"name": "s2p1q1o2",
+			"title": "No"
+		}],
+		"title": "Since you are over 25, do you have children already?"
+	}]
+}]
